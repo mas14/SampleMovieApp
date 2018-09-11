@@ -20,7 +20,8 @@ public class MovieDetailActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_detail_page);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent intent = getIntent();
 
         bannerImage = (ImageView) findViewById(R.id.poster_image);

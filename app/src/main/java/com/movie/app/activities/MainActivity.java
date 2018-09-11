@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -61,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                 .addConverterFactory(LoganSquareConverterFactory.create())
                 .build();
         moviesAPICall = retrofit.create(RestAPI.class);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         filterBtnOldest = (Button) findViewById(R.id.filterBtnOldest);
         filterBtnLatest = (Button) findViewById(R.id.filterBtnLatest);
